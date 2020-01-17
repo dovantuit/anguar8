@@ -71,4 +71,14 @@ export class App1Component implements OnInit {
     console.log(this.value); // hiển thị giá trị của biến [value] sau khi ấn "enter"
     
   }
+
+  // hello(event){
+  //   Alert.alert('Thông báo',
+  //     'Bạn vừa load thêm danh sách phim!',
+  //     [
+  //       { text: 'Tôi biết rồi!', onPress: () => console.log('Ok Pressed') }
+  //     ])
+  // }
+
+  
 }
