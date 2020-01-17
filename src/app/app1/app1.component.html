@@ -19,11 +19,7 @@
       <td>{{ p.id }}</td>
       <td>{{ p.name }}</td>
       <td>
-        <img
-          src="https://picsum.photos/200/300?a"
-          width="100"
-          height="50"
-        />
+        <img src="https://picsum.photos/200/300?a" width="100" height="50" />
       </td>
       <td>{{ p.price }}</td>
       <td>{{ p.quantity }}</td>
@@ -44,3 +40,7 @@
 <input (keyup)="onKey($event)" />
 <br />
 <input (keyup.enter)="onEnter($event)" />
+<br />
+<!-- // hiển thị tên file  -->
+<input type="file" (change)="handleFileInput($event.target.files)" />
+Bạn đã chọn file {{ tenFile }}

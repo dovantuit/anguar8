@@ -13,7 +13,6 @@ export class App1Component implements OnInit {
   constructor() {} //Contructor lớp cha sẽ được sử dụng nếu lớp con kế thừa không có, điều này có nghĩa là contructor con sẽ kế thừa tất cả các đặc tính của contructor cha.
 
   ngOnInit() {
-    
     // gán các phần tử trong list products
     this.products = [
       {
@@ -58,27 +57,22 @@ export class App1Component implements OnInit {
     alert("hello");
   }
 
-  onKey(event: any) { // without type info
+  onKey(event: any) {
+    // without type info
     // do something with event param
     console.log(event); // hiển thị event
     console.log((<HTMLInputElement>event.target).value); // hiện thị kí tự nhập vào keyboard
   }
 
-  value = '';
-  onEnter(event) { 
+  value = "";
+  onEnter(event) {
     // do something
     this.value = event.target.value;
     console.log(this.value); // hiển thị giá trị của biến [value] sau khi ấn "enter"
-    
   }
 
-  // hello(event){
-  //   Alert.alert('Thông báo',
-  //     'Bạn vừa load thêm danh sách phim!',
-  //     [
-  //       { text: 'Tôi biết rồi!', onPress: () => console.log('Ok Pressed') }
-  //     ])
-  // }
-
-  
+  tenFile = "";
+  handleFileInput(files: FileList) {
+    this.tenFile = files.item(0).name;
+  }
 }
