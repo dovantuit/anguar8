@@ -1,0 +1,32 @@
+
+<h3>hello there</h3>
+<h3>hello there</h3>
+<br />
+<h3>Product list</h3>
+<table border="1">
+ <thead>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>photo</th>
+        <th>price</th>
+        <th>quantity</th>
+        <th>total</th>
+      </tr>
+ </thead>
+ <tbody>
+     <!-- Show danh sách các [element] của [products] -->
+    <tr *ngFor="let p of products">
+        <td>{{ p.id }}</td>
+        <td>{{ p.name }}</td>
+        <td><img src="https://techtalk.vn/wp-content/uploads/2017/06/angular-1-696x364.png" width="100" height="50"></td>
+        <td>{{ p.price }}</td>
+        <td>{{ p.quantity }}</td>
+        <td>{{ p.price }}</td>
+      </tr>
+ </tbody>
+</table>
+
+<br />
+<!-- Sự kiện click vào button + -->
+<input type="button" value="+" (click)="sayHello($event)" />
