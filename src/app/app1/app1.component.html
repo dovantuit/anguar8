@@ -12,6 +12,7 @@
         <th>price</th>
         <th>quantity</th>
         <th>total</th>
+        <th>status</th>
       </tr>
  </thead>
  <tbody>
@@ -23,6 +24,7 @@
         <td>{{ p.price }}</td>
         <td>{{ p.quantity }}</td>
         <td>{{ p.price }}</td>
+        <td *ngIf="p.quantity !='0'">{{p.quantity}} in stock</td>
       </tr>
  </tbody>
 </table>
@@ -30,3 +32,8 @@
 <br />
 <!-- Sự kiện click vào button + -->
 <input type="button" value="+" (click)="sayHello($event)" />
+
+<br>
+<input (keyup)="onKey($event)">
+<br>
+<input (keyup.enter)="onEnter($event)">
