@@ -3,8 +3,8 @@ import { Product } from "../../app/entities/product.entity";
 
 @Component({
   selector: "app-root", // bằng cách gọi selector 'app-root' , chúng ta đang nói rằng chúng ta muốn trỏ tương ứng đến tag <app-root></app-root> trong html
-  templateUrl: "./app1.component.html"
-  // styleUrls: ['./app1.component.css']
+  templateUrl: "./app1.component.html",
+  styleUrls: ['./app1.component.css']
 })
 export class App1Component implements OnInit {
   title = "Tzeerror";
